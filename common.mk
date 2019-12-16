@@ -108,10 +108,6 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
 
-# Doze
-PRODUCT_PACKAGES += \
-    OnePlusDoze
-
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
