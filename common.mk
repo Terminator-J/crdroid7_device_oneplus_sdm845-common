@@ -199,7 +199,7 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
-    
+
 # OnePlus Camera
 # (portrait mode & night sight don't work correctly currently)
-$(call inherit-product-if-exists, vendor/onepluscamera/config.mk)
+$(call inherit-product-if-exists, vendor/addons/onepluscamera/config.mk)
