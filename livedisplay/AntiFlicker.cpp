@@ -29,6 +29,9 @@ namespace implementation {
 static constexpr const char* kDcDimmingPath =
     "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en";
 
+static constexpr const char* kDitherPath =
+    "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dither_en";
+
 Return<bool> AntiFlicker::isEnabled() {
     std::ifstream file(kDcDimmingPath);
     int result = -1;
@@ -38,10 +41,14 @@ Return<bool> AntiFlicker::isEnabled() {
 }
 
 Return<bool> AntiFlicker::setEnabled(bool enabled) {
-    std::ofstream file(kDcDimmingPath);
-    file << (enabled ? "1" : "0");
-    LOG(DEBUG) << "setEnabled fail " << file.fail();
-    return !file.fail();
+    std::ofstream file1(kDcDimmingPath);
+    file1 << (enabled ? "1" : "0");
+    LOG(DEBUG) << "setEnabled fail " << file1.fail();
+
+    std::ofstream file2(kDitherPath);
+    file2 << (enabled ? "1" : "0");
+    LOG(DEBUG) << "setEnabled fail " << file2.fail();
+    return !file1.fail() == !file2.fail();
 }
 
 }  // namespace implementation
