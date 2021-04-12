@@ -102,14 +102,14 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
 
-# HIDL
-PRODUCT_PACKAGES += \
-    libhidltransport \
-    libhwbinder \
-
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
+
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhwbinder
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
