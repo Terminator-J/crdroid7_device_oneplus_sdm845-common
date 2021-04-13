@@ -106,6 +106,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Google Camera
+$(call inherit-product, packages/apps/GoogleCamera/config.mk)
+
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport \
