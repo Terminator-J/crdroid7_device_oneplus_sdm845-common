@@ -1,0 +1,2 @@
+allow system_server lineage_data_file:dir { search };
+allow cameraserver lineage_data_file:file { getattr open write };
