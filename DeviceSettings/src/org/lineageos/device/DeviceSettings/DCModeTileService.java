@@ -52,7 +52,6 @@ public class DCModeTileService extends TileService {
         enabled = DCModeSwitch.isCurrentlyEnabled(this);
         getQsTile().setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
         getQsTile().updateTile();
-
     }
 
     @Override
@@ -64,11 +63,11 @@ public class DCModeTileService extends TileService {
     public void onClick() {
         super.onClick();
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        enabled = DCModeSwitch.isCurrentlyEnabled(this);
-        Utils.writeValue(DCModeSwitch.getFile(), enabled ? "0" : "1");
-        sharedPrefs.edit().putBoolean(DeviceSettings.KEY_DC_SWITCH, enabled ? false : true).commit();
+        enabled = !DCModeSwitch.isCurrentlyEnabled(this);
+        DCModeSwitch.setEnabled(enabled);
+        sharedPrefs.edit().putBoolean(DeviceSettings.KEY_DC_SWITCH, enabled).commit();
         //getQsTile().setLabel(enabled ? "DC off" : "DC On");
-        getQsTile().setState(enabled ? Tile.STATE_INACTIVE : Tile.STATE_ACTIVE);
+        getQsTile().setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
         getQsTile().updateTile();
     }
 }
