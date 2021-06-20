@@ -10,7 +10,7 @@ ro.kernel.ebpf.supported=true
 camera.disable_zsl_mode=true
 persist.camera.privapp.list=com.oneplus.camera,com.oneplus.camera.service
 persist.vendor.camera.privapp.list=com.oneplus.camera,com.oneplus.camera.service
-vendor.camera.aux.packagelist=com.oneplus.camera,com.oneplus.camera.service,org.codeaurora.snapcam
+vendor.camera.aux.packagelist=com.oneplus.camera,com.oneplus.camera.service,com.google.android.GoogleCamera
 vendor.camera.skip_unconfigure.packagelist=com.oneplus.camera,com.oneplus.camera.service
 
 # Charger
