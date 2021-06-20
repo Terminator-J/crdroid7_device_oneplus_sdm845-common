@@ -50,8 +50,7 @@ public class Startup extends BroadcastReceiver {
                }
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_DC_SWITCH, false);
         if (enabled) {
-        mHBM = false;
-        restore(DCModeSwitch.getFile(), enabled);
+        DCModeSwitch.setEnabled(enabled);
                }
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_DCI_SWITCH, false);
         if (enabled) {
@@ -67,6 +66,8 @@ public class Startup extends BroadcastReceiver {
         if (enabled) {
             context.startService(new Intent(context, FPSInfoService.class));
         }
+
+        Utils.enableService(context);
     }
 
     private void restore(String file, boolean enabled) {
