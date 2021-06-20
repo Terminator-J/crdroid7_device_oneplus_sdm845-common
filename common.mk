@@ -127,6 +127,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Google Camera
+$(call inherit-product-if-exists, packages/apps/GoogleCamera/config.mk)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/GoogleCamera/privapp-permissions-org.codeaurora.snapcam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-org.codeaurora.snapcam.xml \
+    $(LOCAL_PATH)/configs/GoogleCamera/privapp-permissions-com.google.android.GoogleCamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.google.android.GoogleCamera.xml
+
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport \
