@@ -92,9 +92,19 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     Snap
 
+# Camera HIDL
+PRODUCT_PACKAGES += \
+    vendor.oneplus.camera.CameraHIDL@1.0 \
+    vendor.oneplus.camera.CameraHIDL@1.0-adapter-helper \
+    vendor.oneplus.camera.CameraHIDL-V1.0-java \
+    vendor.oneplus.hardware.CameraMDMHIDL@1.0 \
+    vendor.oneplus.hardware.camera@1.0 \
+    vendor.oneplus.hardware.display@1.0
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.device.settings.rc \
+    init.opcamera.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
     init.smartcharging.rc \

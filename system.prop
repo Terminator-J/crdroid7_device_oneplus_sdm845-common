@@ -8,7 +8,10 @@ ro.kernel.ebpf.supported=true
 
 # Camera
 camera.disable_zsl_mode=true
+persist.camera.privapp.list=com.oneplus.camera,com.oneplus.camera.service
+persist.vendor.camera.privapp.list=com.oneplus.camera,com.oneplus.camera.service
 vendor.camera.aux.packagelist=com.oneplus.camera,com.oneplus.camera.service,org.codeaurora.snapcam
+vendor.camera.skip_unconfigure.packagelist=com.oneplus.camera,com.oneplus.camera.service
 
 # Charger
 ro.charger.disable_init_blank=true
