@@ -56,6 +56,9 @@ TARGET_KERNEL_SOURCE := kernel/oneplus/sdm845
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := r416183d
 TARGET_KERNEL_ADDITIONAL_FLAGS := AS=llvm-as AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+#TARGET_KERNEL_CLANG_VERSION := mcd_v13
+#KERNEL_TOOLCHAIN := $(BUILD_TOP)/prebuilts/clang/host/linux-x86/clang-mcd_v13/bin
+#TARGET_KERNEL_ADDITIONAL_FLAGS := AS=llvm-as AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip LD=ld.lld CROSS_COMPILE=$(BUILD_TOP)/prebuilts/clang/host/linux-x86/clang-mcd_v13/bin/aarch64-linux-gnu- CROSS_COMPILE_ARM32=$(BUILD_TOP)/prebuilts/clang/host/linux-x86/clang-mcd_v13/bin/arm-linux-gnueabi-
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
