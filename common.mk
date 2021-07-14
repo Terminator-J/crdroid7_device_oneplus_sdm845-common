@@ -91,8 +91,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libcvface_api \
-    Snap
+    libcvface_api
 
 # Camera HIDL
 PRODUCT_PACKAGES += \
