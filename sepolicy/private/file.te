@@ -12,6 +12,7 @@ type sysfs_graphics, sysfs_type, fs_type;
 type sysfs_oem, sysfs_type, fs_type;
 type sysfs_ssr, sysfs_type, fs_type;
 type sysfs_ssr_toggle,  sysfs_type, fs_type;
+type sysfs_tri_state_key, sysfs_type, fs_type;
 type sysfs_usb_supply, sysfs_type, fs_type;
 
 # data

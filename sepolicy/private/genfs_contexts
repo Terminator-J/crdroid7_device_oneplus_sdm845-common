@@ -31,3 +31,6 @@ genfscon sysfs /devices/platform/soc/8300000.qcom,turing/subsys5/restart_level u
 
 genfscon sysfs /devices/platform/soc/4080000.qcom,mss/subsys6/name u:object_r:sysfs_ssr:s0
 genfscon sysfs /devices/platform/soc/4080000.qcom,mss/subsys6/restart_level u:object_r:sysfs_ssr_toggle:s0
+
+# Tri-state-key
+genfscon sysfs /devices/platform/soc/soc:tri_state_key/extcon/extcon4/state u:object_r:sysfs_tri_state_key:s0

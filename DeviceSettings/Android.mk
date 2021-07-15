@@ -35,6 +35,7 @@ LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
+    org.lineageos.platform.internal \
     vendor.oneplus.hardware.camera-V1.0-java
 
 package_resource_overlays := $(strip \

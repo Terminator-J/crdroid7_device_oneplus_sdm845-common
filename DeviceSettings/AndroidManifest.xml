@@ -24,7 +24,9 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
 
+    <protected-broadcast android:name="org.lineageos.device.DeviceSettings.UPDATE_SLIDER_SETTINGS" />
     <protected-broadcast android:name="org.lineageos.device.DeviceSettings.UPDATE_SLIDER_POSITION" />
 
     <uses-sdk
@@ -33,7 +35,9 @@
     <application
         android:icon="@drawable/ic_settings_device"
         android:label="@string/device_title"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:defaultToDeviceProtectedStorage="true"
+        android:directBootAware="true">
 
         <!-- Device Settings -->
         <activity
